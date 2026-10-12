@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Vibrant Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      fill: #94a3b8;
+    }
+    .tagline-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      fill: #38bdf8;
+    }
+    .card-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #cbd5e1;
+    }
+    .card-metric {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      fill: #38bdf8;
+    }
+
+    /* Ambient Pulsing Glow */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
+    }
+    .ambient-orb {
+      animation: pulseGlow 6s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    /* Animated Circuit / Flow Particles */
+    @keyframes flow1 {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .stream-line {
+      stroke-dasharray: 12 16;
+      animation: flow1 14s linear infinite;
+    }
+
+    /* Floating Step Badges */
+    @keyframes floatSoft {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    .step-badge-1 { animation: floatSoft 4s ease-in-out infinite; }
+    .step-badge-2 { animation: floatSoft 4.5s ease-in-out infinite 0.8s; }
+    .step-badge-3 { animation: floatSoft 5s ease-in-out infinite 1.6s; }
+    .step-badge-4 { animation: floatSoft 4.8s ease-in-out infinite 2.2s; }
+  </style>
+
+  <!-- Deep Tech Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Grid Overlay Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Ambient Orbs (strictly background) -->
+  <circle cx="150" cy="180" r="140" fill="#3b82f6" opacity="0.22" filter="url(#glow)" class="ambient-orb" />
+  <circle cx="1060" cy="90" r="130" fill="#8b5cf6" opacity="0.25" filter="url(#glow)" class="ambient-orb" />
+  <circle cx="650" cy="300" r="110" fill="#06b6d4" opacity="0.18" filter="url(#glow)" class="ambient-orb" />
+
+  <!-- Dynamic Flow Connector Curves behind cards -->
+  <path d="M 120 270 C 350 240, 500 300, 720 270 C 850 250, 950 280, 1100 270" fill="none" stroke="url(#accentGrad)" stroke-width="2" opacity="0.45" class="stream-line" />
+  <path d="M 160 290 C 400 310, 620 260, 880 290 C 990 300, 1080 270, 1140 280" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.3" class="stream-line" style="animation-direction: reverse;" />
+
+  <!-- Foreground Content: Header Info -->
+  <g transform="translate(80, 55)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="220" height="28" rx="14" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1" />
+    <text x="110" y="18" text-anchor="middle" class="tagline-text">⚡ QUOTE-TO-CASH STACK</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" class="title-text">Awesome CPQ Ecosystem</text>
+
+    <!-- Gradient Bar Under Title -->
+    <rect x="0" y="85" width="480" height="4" rx="2" fill="url(#accentGrad)" />
+
+    <!-- Subtitle -->
+    <text x="0" y="120" class="subtitle-text">Curated SaaS Platforms, Dynamic Pricing Engines &amp; Open-Source Quoting Tools</text>
+  </g>
+
+  <!-- Dynamic CPQ Stage Badges (Bottom Track) -->
+  <!-- Stage 1: Configure -->
+  <g class="step-badge-1" transform="translate(80, 225)">
+    <rect width="230" height="72" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="36" cy="36" r="18" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="36" y="41" text-anchor="middle" font-size="16" fill="#38bdf8">⚙️</text>
+    <text x="68" y="32" class="card-label">1. Configure</text>
+    <text x="68" y="50" class="card-metric">Catalog &amp; Rules Engine</text>
+  </g>
+
+  <!-- Stage 2: Price -->
+  <g class="step-badge-2" transform="translate(340, 225)">
+    <rect width="230" height="72" rx="12" fill="url(#cardGrad)" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="36" cy="36" r="18" fill="#4f46e5" fill-opacity="0.25" stroke="#818cf8" stroke-width="1.5" />
+    <text x="36" y="41" text-anchor="middle" font-size="16" fill="#818cf8">🏷️</text>
+    <text x="68" y="32" class="card-label">2. Price</text>
+    <text x="68" y="50" class="card-metric">Dynamic &amp; Usage Tiers</text>
+  </g>
+
+  <!-- Stage 3: Quote -->
+  <g class="step-badge-3" transform="translate(600, 225)">
+    <rect width="230" height="72" rx="12" fill="url(#cardGrad)" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="36" cy="36" r="18" fill="#9333ea" fill-opacity="0.25" stroke="#c084fc" stroke-width="1.5" />
+    <text x="36" y="41" text-anchor="middle" font-size="16" fill="#c084fc">📄</text>
+    <text x="68" y="32" class="card-label">3. Quote</text>
+    <text x="68" y="50" class="card-metric">Automated Approvals &amp; PDF</text>
+  </g>
+
+  <!-- Stage 4: Cash / Contract -->
+  <g class="step-badge-4" transform="translate(860, 225)">
+    <rect width="250" height="72" rx="12" fill="url(#cardGrad)" stroke="#34d399" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="36" cy="36" r="18" fill="#059669" fill-opacity="0.25" stroke="#34d399" stroke-width="1.5" />
+    <text x="36" y="41" text-anchor="middle" font-size="16" fill="#34d399">💳</text>
+    <text x="68" y="32" class="card-label">4. Cash &amp; Renew</text>
+    <text x="68" y="50" class="card-metric" fill="#34d399">E-Sign, Billing &amp; Subscriptions</text>
+  </g>
+
+</svg>
