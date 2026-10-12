@@ -22,6 +22,7 @@
 - [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
 - [🏗️ Recommended Architecture Stacks](#-recommended-architecture-stacks)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [📈 Star History](#-star-history)
 - [⚖️ Disclaimer](#-disclaimer)
 
@@ -117,9 +118,22 @@ Contributions are welcome! Please follow these simple steps:
 
 ---
 
+## 💖 Support & Sponsorship
+
+Thank you so much for visiting and using this resource! 🙏
+
+If this project has saved you time, helped your RevOps architecture, or provided valuable insights into the Configure, Price, Quote ecosystem, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it.
+- 🍴 **Fork and contribute** your favorite CPQ solutions and tools.
+- 📢 **Share it** with colleagues, sales engineering teams, and developer communities.
+- ☕ **Buy me a coffee / Sponsor**: Support ongoing maintenance and curation via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Awesome-Configure,-Price,-Quote-Cpq&type=Date)](https://star-history.com/#ishandutta2007/Awesome-Configure,-Price,-Quote-Cpq&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Configure,-Price,-Quote-Cpq&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Configure,-Price,-Quote-Cpq&type=date&legend=top-left)
 
 ---
 
